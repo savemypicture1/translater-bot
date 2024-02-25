@@ -17,7 +17,7 @@ def translate_text(text):
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.reply_to(message, 'LEARN THE ENGLISH! BLEAT!!')
+    bot.reply_to(message, 'LEARN THE ENGLISH! BLEAT!!!')
 
 
 @bot.message_handler(func=lambda message: True)
@@ -28,5 +28,4 @@ def translate_message(message):
     bot.reply_to(message, f'{translated_text}')
 
 
-if __name__ == "__main__":
-    bot.polling()
+bot.polling(none_stop=True)
